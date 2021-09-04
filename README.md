@@ -15,7 +15,7 @@ The technologies than I used for build it were:
 - [Apexcharts](https://apexcharts.com/)
 
 I also used yup, for validating the data on form, and form is builded with junction of yup and react-hook-form.
-And I also took care to maintain responsiveness!!!
+And I also took care to maintain responsivity!!!
 
 ## 🔖 | Layout
 
