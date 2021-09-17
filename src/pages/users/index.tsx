@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { RiAddLine } from "react-icons/ri";
+import { useState } from "react";
 
 import { Header } from "../../components/Header";
 import { Pagination } from "../../components/Pagination";
@@ -24,6 +25,7 @@ import { Sidebar } from '../../components/Sidebar/index'
 import { useUsers } from "../../services/hooks/useUsers";
 
 export default function UserList() {
+  const [page, setPage] = useState(1)
   const { data, isLoading, error, isFetching } = useUsers()
 
   const isWideVersion = useBreakpointValue({
@@ -111,8 +113,8 @@ export default function UserList() {
 
               <Pagination 
                 totalCountOfRegisters={200}
-                currentPage={5}
-                onPageChange={() => {}}
+                currentPage={page}
+                onPageChange={setPage}
               />
             </>
           )}
