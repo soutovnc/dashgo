@@ -62,14 +62,14 @@ export function Pagination({
 
         <PaginationItem onPageChange={onPageChange} number={currentPage} isCurrent/>
 
-        {nextPages.length > 0 && previousPages.map(page => {
+        {nextPages.length > 0 && nextPages.map(page => {
           return <PaginationItem onPageChange={onPageChange} key={page} number={page} />
         })}
 
         {(currentPage + siblingsCount) < lastPage && (
           <>
             { (currentPage + 1 + siblingsCount) < lastPage && (
-              <Text color="gray.300" width="8">...</Text>
+              <Text color="gray.300" width="8" textAlign="center">...</Text>
             )}
             <PaginationItem onPageChange={onPageChange} number={lastPage} />
           </>
